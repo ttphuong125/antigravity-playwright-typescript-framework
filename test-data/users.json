@@ -1,0 +1,23 @@
+{
+  "users": [
+    {
+      "role": "admin",
+      "username": "admin",
+      "password": "Admin@123",
+      "description": "Administrator account for positive testing"
+    },
+    {
+      "role": "standard",
+      "username": "user01",
+      "password": "User@123",
+      "description": "Standard user for permission testing"
+    },
+    {
+      "role": "invalid",
+      "username": "nonexistent",
+      "password": "WrongPass!",
+      "description": "Invalid credentials for negative testing"
+    }
+  ],
+  "notes": "These are SAMPLE credentials. Replace with actual test account data or use env variables in CI."
+}

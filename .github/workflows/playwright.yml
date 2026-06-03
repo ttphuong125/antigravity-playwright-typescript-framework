@@ -1,0 +1,79 @@
+name: Playwright Tests with Allure Report
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  test:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: 18
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci || npm install
+
+    - name: Install Playwright Browsers
+      run: npx playwright install --with-deps
+
+    - name: Run Playwright tests with Allure
+      run: npm run test:allure || true
+      env:
+        CI: true
+        BASE_URL: ${{ secrets.BASE_URL || 'https://crm.anhtester.com' }}
+        ADMIN_USERNAME: ${{ secrets.ADMIN_USERNAME || 'admin@example.com' }}
+        ADMIN_PASSWORD: ${{ secrets.ADMIN_PASSWORD || '123456' }}
+
+    - name: Get Allure history
+      uses: actions/checkout@v4
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
+
+    - name: Generate Allure Report
+      uses: simple-elf/allure-report-action@master
+      if: always()
+      id: allure-report
+      with:
+        allure_results: allure-results
+        gh_pages: gh-pages
+        allure_report: allure-report
+        allure_history: allure-history
+        keep_reports: 20
+
+    - name: Deploy Allure Report to GitHub Pages
+      if: always()
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_branch: gh-pages
+        publish_dir: allure-history
+
+    - name: Upload HTML and Allure Artifacts
+      uses: actions/upload-artifact@v4
+      if: always()
+      with:
+        name: playwright-allure-reports
+        path: |
+          playwright-report/
+          allure-report/
+          test-results/
+        retention-days: 10
