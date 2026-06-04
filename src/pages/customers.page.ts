@@ -45,10 +45,16 @@ export class CustomersPage extends BasePage {
       this.logger.info('Verifying if customers table has data');
       
       // Đợi table xuất hiện
-      await this.page.waitForSelector('table#clients', { state: 'visible', timeout: 10000 });
+      await this.page.waitForSelector('table#clients', { state: 'visible', timeout: 15000 });
       
-      // Đợi kết thúc loading của datatable (nếu có spinner)
-      await this.page.waitForSelector('table#clients_processing', { state: 'hidden', timeout: 10000 }).catch(() => {});
+      // Đợi kết thúc loading của datatable (ẩn spinner/loader thực tế)
+      // Sử dụng selector đúng '#clients_processing' và '.dt-loader' thay vì 'table#clients_processing'
+      await this.page.waitForSelector('#clients_processing', { state: 'hidden', timeout: 15000 }).catch(() => {});
+      await this.page.waitForSelector('.dt-loader', { state: 'hidden', timeout: 15000 }).catch(() => {});
+      
+      // Smart wait: Đợi cho dòng đầu tiên của table body hiển thị (dù là dòng trống dataTables_empty hay dòng dữ liệu)
+      // Điều này đảm bảo dữ liệu (hoặc trạng thái trống) đã được render xong vào DOM
+      await this.page.locator('table#clients tbody tr').first().waitFor({ state: 'visible', timeout: 15000 });
 
       // Kiểm tra dòng trống
       const isEmptyVisible = await this.emptyTableMessage.isVisible();
