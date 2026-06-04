@@ -48,6 +48,23 @@ jobs:
         ref: gh-pages
         path: gh-pages
 
+    - name: Init gh-pages branch if missing
+      if: always()
+      run: |
+        if [ ! -d "gh-pages" ]; then
+          echo "gh-pages branch does not exist. Initializing..."
+          mkdir gh-pages
+          cd gh-pages
+          git init
+          git checkout -b gh-pages
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git commit --allow-empty -m "Init gh-pages branch"
+          git remote add origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git
+          git push -u origin gh-pages
+          cd ..
+        fi
+
     - name: Generate Allure Report
       uses: simple-elf/allure-report-action@master
       if: always()
