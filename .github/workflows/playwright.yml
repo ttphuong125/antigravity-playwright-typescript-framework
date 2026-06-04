@@ -66,6 +66,7 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history
+        force_orphan: true
 
     - name: Upload HTML and Allure Artifacts
       uses: actions/upload-artifact@v4
