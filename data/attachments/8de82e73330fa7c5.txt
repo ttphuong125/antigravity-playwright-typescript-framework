@@ -1,0 +1,7 @@
+[2026-06-04T11:08:22.741Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:08:23.441Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:08:23.443Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "admin@example.com"
+[2026-06-04T11:08:23.471Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "123456"
+[2026-06-04T11:08:23.477Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:08:25.293Z] [INFO] [LoginPage] Login performed for user: admin@example.com
+[2026-06-04T11:08:25.310Z] [INFO] [DashboardPage] Dashboard displayed: true (URL match: true, sidebar: false)

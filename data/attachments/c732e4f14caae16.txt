@@ -1,0 +1,6 @@
+[2026-06-04T11:07:55.672Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:56.376Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:56.379Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "' OR 1=1 --"
+[2026-06-04T11:07:56.408Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "anything"
+[2026-06-04T11:07:56.413Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:07:57.069Z] [INFO] [LoginPage] Login performed for user: ' OR 1=1 --

@@ -1,0 +1,8 @@
+[2026-06-04T11:07:05.430Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:06.122Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:06.125Z] [INFO] [LoginPage] Clicking element: locator('a[href*=\'forgot_password\']')
+[2026-06-04T11:07:07.437Z] [INFO] [LoginPage] Clicked Forgot Password link
+[2026-06-04T11:07:07.462Z] [INFO] [ForgotPasswordPage] Filling element: locator('#email') with text: "khongtontai_1780571227461@example.com"
+[2026-06-04T11:07:07.485Z] [INFO] [ForgotPasswordPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:07:07.776Z] [INFO] [ForgotPasswordPage] Clicked Confirm button on Forgot Password page
+[2026-06-04T11:07:07.776Z] [INFO] [ForgotPasswordPage] Forgot password submitted for: khongtontai_1780571227461@example.com

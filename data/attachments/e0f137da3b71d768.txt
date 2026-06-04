@@ -1,0 +1,2 @@
+[2026-06-04T11:07:49.055Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:49.760Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded

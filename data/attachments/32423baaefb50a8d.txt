@@ -1,0 +1,1 @@
+⚠️ SECURITY RISK: Error message reveals email existence: 'Email not found'

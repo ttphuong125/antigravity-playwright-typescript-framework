@@ -1,0 +1,6 @@
+[2026-06-04T11:07:58.190Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:58.894Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:58.897Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "<script>alert('XSS')</script>"
+[2026-06-04T11:07:58.925Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "123456"
+[2026-06-04T11:07:58.931Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:07:59.573Z] [INFO] [LoginPage] Login performed for user: <script>alert('XSS')</script>

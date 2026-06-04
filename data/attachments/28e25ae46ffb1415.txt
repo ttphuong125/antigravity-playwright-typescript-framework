@@ -1,0 +1,4 @@
+[2026-06-04T11:06:59.771Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:00.731Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:00.738Z] [INFO] [LoginPage] Clicking element: locator('a[href*=\'forgot_password\']')
+[2026-06-04T11:07:02.101Z] [INFO] [LoginPage] Clicked Forgot Password link

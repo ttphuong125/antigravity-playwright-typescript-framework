@@ -1,0 +1,12 @@
+[2026-06-04T11:08:13.961Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:08:14.673Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:08:14.676Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "admin@example.com"
+[2026-06-04T11:08:14.705Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "WrongP@ss1"
+[2026-06-04T11:08:14.711Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:08:16.492Z] [INFO] [LoginPage] Login performed for user: admin@example.com
+[2026-06-04T11:08:16.520Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:08:16.780Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:08:16.783Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "khongtontai_1780571296782@example.com"
+[2026-06-04T11:08:16.799Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "WrongP@ss1"
+[2026-06-04T11:08:16.808Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:08:17.362Z] [INFO] [LoginPage] Login performed for user: khongtontai_1780571296782@example.com

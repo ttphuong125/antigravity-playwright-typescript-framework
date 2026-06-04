@@ -1,0 +1,5 @@
+[2026-06-04T11:07:15.004Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:15.695Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:15.701Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "admin@example.com"
+[2026-06-04T11:07:15.731Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:07:17.271Z] [INFO] [LoginPage] Error message contains 'Password': true

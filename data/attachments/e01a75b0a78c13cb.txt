@@ -1,0 +1,4 @@
+[2026-06-04T11:07:40.211Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:40.895Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:40.898Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "TestPassword123"
+[2026-06-04T11:07:40.928Z] [INFO] [LoginPage] Password field type: password

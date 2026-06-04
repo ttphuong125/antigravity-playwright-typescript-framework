@@ -1,0 +1,7 @@
+[2026-06-04T11:07:19.962Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:20.672Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:20.679Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "notexist_1780571240678@example.com"
+[2026-06-04T11:07:20.706Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "WrongPass!456"
+[2026-06-04T11:07:20.712Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:07:22.506Z] [INFO] [LoginPage] Login performed for user: notexist_1780571240678@example.com
+[2026-06-04T11:07:22.536Z] [INFO] [LoginPage] Error message contains 'Invalid email or password': true

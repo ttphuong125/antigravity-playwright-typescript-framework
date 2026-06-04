@@ -1,0 +1,22 @@
+[TEST LOG] Bắt đầu test case: Đăng nhập và xác minh danh sách khách hàng.
+[TEST LOG] 1. Điều hướng đến trang đăng nhập: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:08:17.631Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:08:18.325Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[TEST LOG] 2. Thực hiện đăng nhập với tài khoản: admin@example.com
+[2026-06-04T11:08:18.357Z] [INFO] [LoginPage] Filling element: locator('#email') with text: "admin@example.com"
+[2026-06-04T11:08:18.365Z] [INFO] [LoginPage] Filling element: locator('#password') with text: "123456"
+[2026-06-04T11:08:18.370Z] [INFO] [LoginPage] Clicking element: locator('button[type=\'submit\']')
+[2026-06-04T11:08:19.989Z] [INFO] [LoginPage] Login performed for user: admin@example.com
+[2026-06-04T11:08:20.006Z] [INFO] [DashboardPage] Dashboard displayed: true (URL match: true, sidebar: false)
+[TEST LOG] Đăng nhập thành công, đã hiển thị Dashboard.
+[TEST LOG] 3. Điều hướng đến danh mục Customers
+[2026-06-04T11:08:20.008Z] [INFO] [CustomersPage] Clicking Customers menu link
+[2026-06-04T11:08:20.008Z] [INFO] [CustomersPage] Clicking element: locator('a:has-text("Customers")')
+[2026-06-04T11:08:21.337Z] [INFO] [CustomersPage] Waiting for page load state: domcontentloaded
+[TEST LOG] Đã chuyển sang trang Customers.
+[TEST LOG] 4. Kiểm tra dữ liệu trong bảng danh sách Khách hàng
+[2026-06-04T11:08:21.897Z] [INFO] [CustomersPage] Verifying if customers table has data
+[2026-06-04T11:08:22.215Z] [INFO] [CustomersPage] Number of rows found in table: 25
+[TEST LOG] Xác minh thành công: bảng có dữ liệu hiển thị.
+[TEST LOG] 5. Chụp screenshot lưu tại: /home/runner/work/antigravity-playwright-typescript-framework/antigravity-playwright-typescript-framework/customers_list.png
+[TEST LOG] Đã chụp và lưu screenshot thành công.

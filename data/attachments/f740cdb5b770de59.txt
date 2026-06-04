@@ -1,0 +1,3 @@
+[2026-06-04T11:07:37.783Z] [INFO] [LoginPage] Navigating to: https://crm.anhtester.com/admin/authentication
+[2026-06-04T11:07:38.474Z] [INFO] [LoginPage] Waiting for page load state: domcontentloaded
+[2026-06-04T11:07:38.507Z] [INFO] [LoginPage] Password field type: password
